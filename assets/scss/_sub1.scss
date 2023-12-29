@@ -61,6 +61,7 @@
       font-size: 13px;
       border: 1px solid $gray-400;
       border-radius: 3px;
+      background: $white;
     }
   }
 
@@ -121,7 +122,7 @@
       margin-bottom: 160px;
       ul {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 60px;
         li {
           a {

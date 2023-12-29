@@ -1102,6 +1102,7 @@ body {
   font-size: 13px;
   border: 1px solid #bdbdbd;
   border-radius: 3px;
+  background: #fff;
 }
 @media (min-width: 1280px) {
   #sub1 .dropdown .dropdown_btn {
@@ -1152,7 +1153,7 @@ body {
   }
   #sub1 .item ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 60px;
   }
   #sub1 .item ul li a img {
