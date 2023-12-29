@@ -1,0 +1,439 @@
+#main {
+  .intro {
+    height: 960px;
+    .intro_top {
+      background-image: url(/images/main/480-intro-top.png);
+      position: absolute;
+      margin-top: 3.75rem;
+      width: 100%;
+      height: 450px;
+      h2,
+      p {
+        position: absolute;
+        color: $white;
+        padding: 1.25rem;
+        top: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+      }
+      h2 {
+        font-size: 1.25rem;
+        font-weight: bolder;
+      }
+      p {
+        margin-top: 2.5rem;
+        font-size: 0.8125rem;
+        font-weight: 300;
+      }
+    }
+    .intro_bottom {
+      background-image: url(/images/main/480-intro-bottom.png);
+      position: absolute;
+      margin-top: 510px;
+      width: 100%;
+      height: 450px;
+      h2,
+      p {
+        position: absolute;
+        padding: 1.25rem;
+        top: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+      }
+      h2 {
+        font-size: 1.25rem;
+        font-weight: bolder;
+      }
+      p {
+        margin-top: 2.5rem;
+        font-size: 0.8125rem;
+        font-weight: 300;
+      }
+    }
+  }
+
+  @media (min-width: 480px) {
+    .intro {
+      .intro_top {
+        background-image: url(/images/main/1280-intro-top.png);
+        height: 450px;
+      }
+      .intro_bottom {
+        background-image: url(/images/main/1280-intro-bottom.png);
+        margin-top: 510px;
+        height: 450px;
+      }
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .intro {
+      position: relative;
+      .intro_top,
+      .intro_bottom {
+        position: relative;
+        width: 50%;
+        height: 895px;
+        display: block;
+        float: left;
+        h2,
+        p {
+          top: 550px;
+        }
+        h2 {
+          font-size: 35px;
+        }
+        p {
+          font-size: 18px;
+          margin-top: 70px;
+        }
+      }
+      .intro_top {
+        background-image: url(/images/main/D-intro-top.png);
+      }
+      .intro_bottom {
+        background-image: url(/images/main/D-intro-bottom.png);
+        margin-top: 3.75rem;
+      }
+    }
+  }
+
+  .bestitem {
+    height: 700px;
+    padding: 100px 0;
+    h2 {
+      font-family: "Newyork";
+      font-size: 1.25rem;
+    }
+    swiper-container {
+      margin: 20px;
+      --swiper-theme-color: #326b36;
+    }
+    swiper-slide {
+      a {
+        img {
+          background-color: $gray-200;
+          width: 200px;
+          margin: 30px 0 20px 0;
+        }
+        strong {
+          display: block;
+          font-size: 1.25rem;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        p {
+          font-size: 13px;
+          font-weight: 300;
+          color: $gray-500;
+          margin-bottom: 10px;
+        }
+        span {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 480px) {
+    .bestitem {
+      height: 750px;
+      padding: 150px 0 50px 0;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .bestitem {
+      height: 900px;
+      padding: 150px 200px;
+      h2 {
+        font-size: 35px;
+      }
+      swiper-slide {
+        a {
+          img {
+            width: 300px;
+            margin: 40px 0 20px 0;
+          }
+          strong {
+            font-size: 23px;
+          }
+          p {
+            font-size: 16px;
+          }
+          span {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .benefits {
+    height: 450px;
+    padding: 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    h2 {
+      font-family: "Newyork";
+      font-size: 1.25rem;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .benefits_box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+      font-size: 15px;
+      font-weight: 500;
+      width: calc(50% - 20px);
+      height: 130px;
+      box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      font-weight: 600;
+      .txt1280 {
+        display: none;
+      }
+    }
+    .box1 {
+      &::before {
+        content: "";
+        display: block;
+        background-image: url(/images/main/benefits01.png);
+        background-size: 55px 55px;
+        background-repeat: no-repeat;
+        width: 55px;
+        height: 55px;
+        margin: 0 auto;
+        padding-bottom: 10px;
+      }
+    }
+    .box2 {
+      &::before {
+        content: "";
+        display: block;
+        background-image: url(/images/main/benefits02.png);
+        background-size: 55px 55px;
+        background-repeat: no-repeat;
+        width: 55px;
+        height: 55px;
+        margin: 0 auto;
+        padding-bottom: 10px;
+      }
+    }
+    .box3 {
+      &::before {
+        content: "";
+        display: block;
+        background-image: url(/images/main/benefits03.png);
+        background-size: 55px 55px;
+        background-repeat: no-repeat;
+        width: 55px;
+        height: 55px;
+        margin: 0 auto;
+        padding-bottom: 10px;
+      }
+    }
+    .box4 {
+      &::before {
+        content: "";
+        display: block;
+        background-image: url(/images/main/benefits04.png);
+        background-size: 55px 55px;
+        background-repeat: no-repeat;
+        width: 55px;
+        height: 55px;
+        margin: 0 auto;
+        padding-bottom: 10px;
+      }
+    }
+    a {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+      text-decoration: underline;
+      color: $gray-500;
+      font-size: 15px;
+    }
+  }
+
+  @media (min-width: 480px) {
+    .benefits {
+      height: 350px;
+      margin: 40px 0;
+      .benefits_box {
+        width: calc(25% - 20px);
+      }
+      h2 {
+        margin-bottom: 0;
+      }
+      a {
+        margin-top: 0;
+      }
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .benefits {
+      height: 800px;
+      padding: 150px 200px 20px 200px;
+      h2 {
+        font-size: 35px;
+      }
+      .benefits_box {
+        height: 350px;
+        font-size: 23px;
+        margin: 60px 0;
+        .txt1280 {
+          display: block;
+          font-size: 16px;
+          color: $gray-500;
+          padding: 10px;
+          font-weight: 300;
+        }
+      }
+      .box1,
+      .box2,
+      .box3,
+      .box4 {
+        &::before {
+          background-size: 145px 145px;
+          width: 145px;
+          height: 145px;
+        }
+      }
+      a {
+        margin-top: 20px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .blueheart {
+    padding: 70px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .txt1280_2 {
+      display: none;
+    }
+
+    h2,
+    a {
+      position: absolute;
+      text-align: center;
+      color: $white;
+      z-index: 2;
+    }
+
+    h2 {
+      font-family: "Newyork";
+      font-size: 20px;
+      top: 38%;
+    }
+
+    a {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: calc(50% + 20px);
+      color: $white;
+      font-size: 13px;
+      background-color: #0a4f84;
+      padding: 10px 20px;
+      border-radius: 20px;
+      z-index: 2;
+    }
+  }
+
+  @media (min-width: 480px) {
+    .blueheart {
+      padding: 70px 0;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .blueheart {
+      padding: 120px 0;
+      .txt1280_2 {
+        display: block;
+        position: absolute;
+        text-align: center;
+        color: $white;
+        z-index: 2;
+        font-weight: lighter;
+      }
+      h2 {
+        font-size: 35px;
+        top: 33%;
+      }
+      a {
+        top: calc(60% + 20px);
+        font-size: 20px;
+        border-radius: 50px;
+      }
+    }
+  }
+
+  .instagram {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 50px 20px 100px 20px;
+    h2 {
+      font-family: "Newyork";
+      font-size: 1.25rem;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .instagram_img {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        flex: 0 0 33.333333%;
+        padding: 5px;
+        box-sizing: border-box;
+        a {
+          transition: transform 0.3s;
+          img {
+            width: 100%;
+            display: block;
+          }
+          &:hover {
+            img {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 480px) {
+    .instagram {
+      padding: 50px 50px 100px 50px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .instagram {
+      padding: 70px 200px 200px 200px;
+      h2 {
+        font-size: 35px;
+      }
+      .instagram_img {
+        margin-top: 60px;
+        padding: 0 220px;
+      }
+    }
+  }
+}
