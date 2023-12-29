@@ -1152,11 +1152,11 @@ body {
   }
   #main_sub1 .item ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 60px;
   }
   #main_sub1 .item ul li a img {
-    width: 400px;
+    width: 300px;
   }
   #main_sub1 .item ul li a strong {
     font-size: 23px;
