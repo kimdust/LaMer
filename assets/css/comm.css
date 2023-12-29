@@ -1170,10 +1170,10 @@ body {
 }
 
 @media (min-width: 1280px) {
-  #main_sub1 {
+  #sub1 {
     margin: 100px 200px 0px 200px;
   }
-  #main_sub1 h2 {
+  #sub1 h2 {
     font-size: 35px;
   }
 }
