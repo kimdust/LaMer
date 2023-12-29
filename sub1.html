@@ -47,6 +47,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script defer src="./assets/js/comm.js"></script>
   </head>
@@ -116,195 +117,306 @@
         </div>
       </header>
 
-      <main>
-        <div class="wrap_sub1">
+      <main id="main_sub1">
+        <div>
           <h2>BEST ITEM</h2>
-        </div>
-        <div class="category">
-          <ul>
-            <li>
-              <a href="#">전체</a>
-            </li>
-            <li>
-              <a href="#">모이스춰라이저</a>
-            </li>
-            <li>
-              <a href="#">아이 트리트먼트</a>
-            </li>
-            <li>
-              <a href="#">세럼</a>
-            </li>
-            <li>
-              <a href="#">워터리 로션</a>
-            </li>
-            <li>
-              <a href="#">틀렌저/토너</a>
-            </li>
-            <li>
-              <a href="#">스페셜 케어</a>
-            </li>
-          </ul>
-        </div>
-        <div class="dropdown"></div>
-        <select class="dropdown_btn">
-          <option value selected="selected">추천순</option>
-          <option value="hit">인기순</option>
-          <option value="sell">누적판매순</option>
-          <option value="date">최신등록순</option>
-          <option value="review">리뷰많은순</option>
-          <option value="score">평점높은순</option>
-          <option value="price_high">높은가격순</option>
-          <option value="price_low">낮은가격순</option>
-        </select>
-        <div class="item">
-          <ul>
-            <li>
-              <a href="#">
-                <img src="./images/item/크렘 드 라 메르.png" alt="" />
-                <strong>크렘 드 라 메르</strong>
-                <p>
-                  리치한 질감과 촉촉한 마무리의
-                  <br />
-                  오리지널 럭셔리 크림
-                </p>
-                <span>최저 &#8361;162,000 &#47; 6가지 용량</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img
-                  src="./images/item/NEW 모이스춰라이징 소프트 크림.png"
-                  alt=""
-                />
-                <strong>NEW 모이스춰라이징 소프트 크림</strong>
-                <p>
-                  멀티 사이즈 수분 캡슐로 피부에 풍부한 보습과
-                  <br />
-                  탄력을 담은 안티에이징 소프트 크림
-                </p>
-                <span>최저 &#8361;162,000 &#47; 3가지 용량</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img
-                  src="./images/item/어드밴스드 트리트먼트 로션.png"
-                  alt=""
-                />
-                <strong>어드밴스드 트리트먼트 로션</strong>
-                <p>
-                  탄력 있는 동안 피부를 위한
-                  <br />
-                  어드밴스드 트리트먼트 로션
-                </p>
-                <span>최저 &#8361;182,000 &#47; 2가지 용량</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="./images/item/모이스춰라이징 쿨 젤 크림.png" alt="" />
-                <strong>모이스춰라이징 쿨 젤 크림</strong>
-                <p>
-                  강력한 쿨링감과 수분감을 선사하는
-                  <br />
-                  쿨 젤 크림
-                </p>
-                <span>최저 &#8361;162,000 &#47; 2가지 용량</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="./images/item/쿠션 파운데이션.png" alt="" />
-                <strong>루미너스 리프팅 쿠션 파운데이션 SPF20</strong>
-                <p>
-                  미라클 브로스&#8482;의 영양, 수분이
-                  <br />
-                  가득 담긴 쿠션 파운데이션
-                </p>
-                <span>최저 &#8361;195,000 &#47; 4가지 색상</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="./images/item/컨센트레이트.png" alt="" />
-                <strong>컨센트레이트</strong>
-                <p>
-                  피부 진정 및 보호를 위한 벨벳같이 부드러운
-                  <br />
-                  토탈 안티에이징 세럼
-                </p>
-                <span>&#8361;193,000</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="./images/item/립 밤.png" alt="" />
-                <strong>립 밤</strong>
-                <p>
-                  건조한 입술을
-                  <br />
-                  매끄럽고 부드럽게 케어해주는 립 밤
-                </p>
-                <span>&#8361;107,000</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="./images/item/미스트.png" alt="" />
-                <strong>미스트</strong>
-                <p>
-                  피부에 생기 에너지와
-                  <br />
-                  활력을 선사해주는 미스트
-                </p>
-                <span>&#8361;131,000</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="./images/item/아이 컨센트레이트.png" alt="" />
-                <strong>아이 컨센트레이트</strong>
-                <p>
-                  다크서클을 완화하여
-                  <br />
-                  더 밝고 건강한 눈가 피부
-                </p>
-                <span>&#8361;389,000</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img
-                  src="./images/item/SPF50 UV 프로텍팅 플루이드.png"
-                  alt=""
-                />
-                <strong>SPF50 UV 프로텍팅 플루이드</strong>
-                <p>
-                  피부 손상으로부터 보호하는
-                  <br />
-                  데일리 안티에이징 자외선 차단제
-                </p>
-                <span>&#8361;193,000</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img
-                  src="./images/item/리바이탈라이징 하이드레이팅 세럼.png"
-                  alt=""
-                />
-                <strong>리바이탈라이징 하이드레이팅 세럼</strong>
-                <p>
-                  피부에 수분과 활력으로 채워주는
-                  <br />
-                  워터 플럼핑 세럼
-                </p>
-                <span>&#8361;356,000</span>
-              </a>
-            </li>
-          </ul>
+          <div class="category" id="categoryContainer">
+            <swiper-container
+              class="mySwiper active"
+              slides-per-view="3.6"
+              space-between="10"
+              free-mode="true"
+            >
+              <swiper-slide>
+                <a href="#">전체</a>
+              </swiper-slide>
+              <swiper-slide>
+                <a href="#">모이스춰라이저</a>
+              </swiper-slide>
+              <swiper-slide>
+                <a href="#">아이 트리트먼트</a>
+              </swiper-slide>
+              <swiper-slide>
+                <a href="#">세럼</a>
+              </swiper-slide>
+              <swiper-slide>
+                <a href="#">워터리 로션</a>
+              </swiper-slide>
+              <swiper-slide>
+                <a href="#">틀렌저/토너</a>
+              </swiper-slide>
+              <swiper-slide>
+                <a href="#">스페셜 케어</a>
+              </swiper-slide>
+            </swiper-container>
+          </div>
+
+          <div class="dropdown"></div>
+          <select class="dropdown_btn">
+            <option value selected="selected">추천순</option>
+            <option value="hit">인기순</option>
+            <option value="sell">누적판매순</option>
+            <option value="date">최신등록순</option>
+            <option value="review">리뷰많은순</option>
+            <option value="score">평점높은순</option>
+            <option value="price_high">높은가격순</option>
+            <option value="price_low">낮은가격순</option>
+          </select>
+          <div class="item">
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="./images/item/크렘 드 라 메르.png" alt="" />
+                  <strong>크렘 드 라 메르</strong>
+                  <p>
+                    리치한 질감과 촉촉한 마무리의
+                    <br />
+                    오리지널 럭셔리 크림
+                  </p>
+                  <span>최저 &#8361;162,000 &#47; 6가지 용량</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="./images/item/NEW 모이스춰라이징 소프트 크림.png"
+                    alt=""
+                  />
+                  <strong>NEW 모이스춰라이징 소프트 크림</strong>
+                  <p>
+                    멀티 사이즈 수분 캡슐로 피부에 풍부한 보습과
+                    <br />
+                    탄력을 담은 안티에이징 소프트 크림
+                  </p>
+                  <span>최저 &#8361;162,000 &#47; 3가지 용량</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="./images/item/어드밴스드 트리트먼트 로션.png"
+                    alt=""
+                  />
+                  <strong>어드밴스드 트리트먼트 로션</strong>
+                  <p>
+                    탄력 있는 동안 피부를 위한
+                    <br />
+                    어드밴스드 트리트먼트 로션
+                  </p>
+                  <span>최저 &#8361;182,000 &#47; 2가지 용량</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="./images/item/모이스춰라이징 쿨 젤 크림.png"
+                    alt=""
+                  />
+                  <strong>모이스춰라이징 쿨 젤 크림</strong>
+                  <p>
+                    강력한 쿨링감과 수분감을 선사하는
+                    <br />
+                    쿨 젤 크림
+                  </p>
+                  <span>최저 &#8361;162,000 &#47; 2가지 용량</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/item/쿠션 파운데이션.png" alt="" />
+                  <strong>루미너스 리프팅 쿠션 파운데이션 SPF20</strong>
+                  <p>
+                    미라클 브로스&#8482;의 영양, 수분이
+                    <br />
+                    가득 담긴 쿠션 파운데이션
+                  </p>
+                  <span>최저 &#8361;195,000 &#47; 4가지 색상</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/item/컨센트레이트.png" alt="" />
+                  <strong>컨센트레이트</strong>
+                  <p>
+                    피부 진정 및 보호를 위한 벨벳같이 부드러운
+                    <br />
+                    토탈 안티에이징 세럼
+                  </p>
+                  <span>&#8361;193,000</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/item/립 밤.png" alt="" />
+                  <strong>립 밤</strong>
+                  <p>
+                    건조한 입술을
+                    <br />
+                    매끄럽고 부드럽게 케어해주는 립 밤
+                  </p>
+                  <span>&#8361;107,000</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/item/미스트.png" alt="" />
+                  <strong>미스트</strong>
+                  <p>
+                    피부에 생기 에너지와
+                    <br />
+                    활력을 선사해주는 미스트
+                  </p>
+                  <span>&#8361;131,000</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/item/아이 컨센트레이트.png" alt="" />
+                  <strong>아이 컨센트레이트</strong>
+                  <p>
+                    다크서클을 완화하여
+                    <br />
+                    더 밝고 건강한 눈가 피부
+                  </p>
+                  <span>&#8361;389,000</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="./images/item/SPF50 UV 프로텍팅 플루이드.png"
+                    alt=""
+                  />
+                  <strong>SPF50 UV 프로텍팅 플루이드</strong>
+                  <p>
+                    피부 손상으로부터 보호하는
+                    <br />
+                    데일리 안티에이징 자외선 차단제
+                  </p>
+                  <span>&#8361;193,000</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="./images/item/리바이탈라이징 하이드레이팅 세럼.png"
+                    alt=""
+                  />
+                  <strong>리바이탈라이징 하이드레이팅 세럼</strong>
+                  <p>
+                    피부에 수분과 활력으로 채워주는
+                    <br />
+                    워터 플럼핑 세럼
+                  </p>
+                  <span>&#8361;356,000</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </main>
+
+      <footer id="footer">
+        <div class="ft_list">
+          <dl>
+            <dt class="notice">
+              <!-- 아이콘 before -->
+              <a href="#">NOTICE</a>
+            </dt>
+            <dd><a href="#">한글날 배송 안내</a></dd>
+          </dl>
+          <dl>
+            <dt class="news">
+              <!-- 아이콘 before -->
+              <a href="#">NEWS</a>
+            </dt>
+            <dd>
+              <a href="#"
+                >&#91;NEWS&#93; &#34;시대를 초월한 매력&#34; 전지현, 라메르 최초
+                브랜드 엠버서더</a
+              >
+            </dd>
+          </dl>
+        </div>
+
+        <div class="ft_logo">
+          <img src="/images/comm/Logo.png" alt="LA MER" />
+        </div>
+
+        <div class="ft_nav">
+          <ul class="ft_1dept">
+            <li>
+              <input
+                type="checkbox"
+                id="newsletterToggle"
+                class="dept_toggle"
+              />
+              <label for="newsletterToggle" class="txt1280_3">뉴스레터</label>
+              <ul class="ft_2dept letter_2dept">
+                <li class="newsletter_btn">
+                  뉴스레터에 가입해서 라 메르의 최신 정보를 확인하세요.
+                  <input
+                    type="email"
+                    id="email"
+                    pattern=".+@.com"
+                    placeholder="example@gmail.com"
+                    required
+                    class="email"
+                  />
+                  <input type="submit" value="가입하기" class="join" />
+                </li>
+              </ul>
+            </li>
+            <div class="ft_nav_col">
+              <li>
+                <input type="checkbox" id="lamerToggle" class="dept_toggle" />
+                <label for="lamerToggle">라 메르</label>
+                <ul class="ft_2dept col_2dept">
+                  <li><a href="#">라 메르 스토리</a></li>
+                  <li><a href="#">원료에 대한 철학</a></li>
+                  <li><a href="#">미라클 브로스&#8482;</a></li>
+                  <li><a href="#">블루 하트 캠페인</a></li>
+                </ul>
+              </li>
+              <li>
+                <input type="checkbox" id="callToggle" class="dept_toggle" />
+                <label for="callToggle">고객관리지원팀</label>
+                <ul class="ft_2dept col_2dept">
+                  <li><a href="tel:02-6971-3215">02-6971-3215</a></li>
+                  <li><a href="#">고객 문의</a></li>
+                  <li><a href="#">배송 및 교환</a></li>
+                  <li><a href="#">매장 찾기</a></li>
+                  <li><a href="#">라 메르 회사 정보</a></li>
+                  <li><a href="#">채용 정보</a></li>
+                  <li><a href="#">고객 지원 서비스</a></li>
+                </ul>
+              </li>
+              <li>
+                <input type="checkbox" id="followToggle" class="dept_toggle" />
+                <label for="followToggle">팔로우</label>
+                <ul class="ft_2dept col_2dept">
+                  <li><a href="#">인스타그램</a></li>
+                  <li><a href="#">페이스북</a></li>
+                  <li><a href="#">핀터레스트</a></li>
+                  <li><a href="#">유튜브</a></li>
+                </ul>
+              </li>
+            </div>
+          </ul>
+        </div>
+
+        <div class="ft_info">
+          <h5>&#169; 라 메르 테크놀로지, Inc</h5>
+          <ul>
+            <li>
+              <a href="#">개인정보처리방침</a>
+              <a href="#">정품 및 품질 보증</a>
+              <a href="#">서비스 이용약관</a>
+              <a href="#">고객지원 서비스</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
