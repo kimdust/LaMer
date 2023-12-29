@@ -44,7 +44,7 @@
           width: 130px;
           height: 35px;
           &.active {
-            border-bottom: 2px solid $primary;
+            border-bottom: 3px solid $primary;
             font-weight: 600;
           }
         }
@@ -142,9 +142,6 @@
       }
     }
   }
-}
-
-@media (min-width: 480px) {
 }
 
 @media (min-width: 1280px) {
