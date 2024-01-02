@@ -1186,3 +1186,14 @@ body {
   font-size: 20px;
   padding: 30px 0;
 }
+#sub2 .item_info {
+  padding-top: 20px;
+}
+#sub2 .item_info swiper-container swiper-slide img {
+  background-color: #eeeeee;
+  width: 100%;
+  height: auto;
+}
+#sub2 .item_info .item_txt {
+  text-align: left;
+}
