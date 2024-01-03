@@ -18,6 +18,190 @@
     }
     .item_txt {
       text-align: left;
+      .item_main {
+        padding: 15px 0;
+        p {
+          font-size: 12px;
+          color: $gray-500;
+          font-weight: lighter;
+          margin-bottom: 5px;
+        }
+        strong {
+          font-size: 20px;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+        span {
+          font-size: 12px;
+          font-weight: 300;
+          display: block;
+          margin-bottom: 5px;
+        }
+        .review_txt {
+          display: flex;
+          justify-content: space-between;
+          font-size: 12px;
+          margin-bottom: 5px;
+          .review_icon {
+            color: $gray-500;
+            .la-star {
+              color: #ffc120;
+            }
+          }
+        }
+      }
+      .item_option {
+        p {
+          font-size: 12px;
+          color: $gray-500;
+          display: block;
+        }
+        .option_col {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          margin-bottom: 20px;
+          input {
+            margin: 0;
+            width: 0;
+            height: 0;
+            padding: 0;
+            display: none;
+          }
+          label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0 5px 0;
+            font-size: 14px;
+            width: calc(50% - 5px);
+            height: 50px;
+            border: 1px solid $gray-300;
+            border-radius: 10px;
+            &.active {
+              border: 1px solid $primary;
+              background-color: $primary;
+              color: $white;
+            }
+          }
+        }
+      }
+      .item_txt_1dept {
+        text-align: left;
+        border-bottom: 1px solid $gray-300;
+        font-size: 13px;
+        font-weight: 600;
+        li {
+          padding: 15px 0;
+          border-top: 1px solid $gray-300;
+          box-sizing: border-box;
+        }
+        .item_txt_2dept {
+          overflow: hidden;
+          opacity: 0;
+          visibility: hidden;
+          max-height: 0;
+          transition: all 0.3s;
+          font-weight: 300;
+          li {
+            display: block;
+            border: none;
+            text-align: left;
+            transform: translateX(-20px);
+            span {
+              display: block;
+            }
+          }
+        }
+
+        .item_toggle:checked ~ .item_txt_2dept {
+          opacity: 1;
+          visibility: visible;
+          max-height: 300px;
+          padding: 10px 0;
+        }
+        .item_toggle {
+          display: none;
+        }
+      }
+      .item_order {
+        margin-top: 20px;
+        p {
+          font-size: 13px;
+        }
+        .order_col {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          margin-bottom: 20px;
+          .order_box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0 5px 0;
+            font-size: 15px;
+            font-weight: 600;
+            width: calc(50% - 5px);
+            height: 50px;
+            border-radius: 10px;
+          }
+          .order_white {
+            border: 1px solid $gray-300;
+          }
+          .order_primary {
+            border: 1px solid $primary;
+            background-color: $primary;
+            a {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .item_recommend {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    p {
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .rec_col {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      .rec_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0;
+        font-size: 13px;
+        width: 30%;
+        img {
+          background-color: $gray-200;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .item_details {
+    .details_col {
+      display: flex;
+      justify-content: center;
+      li {
+        width: 25%;
+        font-size: 13px;
+        height: 35px;
+        &.active {
+          border-bottom: 3px solid $primary;
+          font-weight: 600;
+        }
+      }
     }
   }
 }

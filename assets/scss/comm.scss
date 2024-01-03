@@ -2,6 +2,9 @@
 
 body {
   text-align: center;
+  swiper-container {
+    --swiper-theme-color: #326b36;
+  }
 }
 
 #header {
