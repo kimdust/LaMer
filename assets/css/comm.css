@@ -1338,8 +1338,8 @@ body swiper-container {
   color: #fff;
 }
 #sub2 .item_recommend {
-  margin-top: 50px;
-  margin-bottom: 40px;
+  margin-top: 60px;
+  margin-bottom: 70px;
 }
 #sub2 .item_recommend p {
   font-size: 15px;
@@ -1364,6 +1364,14 @@ body swiper-container {
   background-color: #eeeeee;
   width: 100%;
 }
+#sub2 .item_details strong {
+  font-size: 20px;
+  font-weight: bold;
+}
+#sub2 .item_details span {
+  font-size: 15px;
+  display: block;
+}
 #sub2 .item_details .details_col {
   display: flex;
   justify-content: center;
@@ -1376,4 +1384,67 @@ body swiper-container {
 #sub2 .item_details .details_col li.active {
   border-bottom: 3px solid #326b36;
   font-weight: 600;
+}
+#sub2 .item_details .details_txt {
+  margin: 40px 0 20px 0;
+}
+#sub2 .item_details .details_txt .details_txt_col {
+  margin-bottom: 100px;
+}
+#sub2 .item_details .details_txt .details_txt_col .details_txt_box {
+  margin-top: 30px;
+}
+#sub2 .item_details .details_txt .details_txt_col .details_txt_box img {
+  width: 70%;
+}
+#sub2 .item_details .details_txt .details_txt_col .details_txt_box .details_txt_more span {
+  font-family: "Newyork";
+  font-size: 18px;
+}
+#sub2 .item_details .details_return {
+  text-align: left;
+  margin: 40px 0 100px 0;
+}
+#sub2 .item_details .details_return span {
+  margin-bottom: 20px;
+}
+#sub2 .item_details .details_review {
+  margin: 40px 0 100px 0;
+}
+#sub2 .item_details .details_review .dropdown {
+  text-align: right;
+  margin: 10px 0 20px 0;
+}
+#sub2 .item_details .details_review .dropdown .dropdown_btn {
+  height: 30px;
+  width: 100px;
+  font-family: "Pretendard";
+  font-size: 13px;
+  border: 1px solid #bdbdbd;
+  border-radius: 3px;
+  background: #fff;
+}
+#sub2 .item_details .details_review .details_review_box {
+  text-align: left;
+}
+#sub2 .item_details .details_review .details_review_box .review_tit {
+  font-size: 16px;
+}
+#sub2 .item_details .details_review .details_review_box .review_type {
+  display: flex;
+  margin: 10px 0 10px 0;
+}
+#sub2 .item_details .details_review .details_review_box .review_type .type_tit {
+  font-weight: 600;
+  font-size: 12px;
+  margin-right: 5px;
+}
+#sub2 .item_details .details_review .details_review_box .review_type .type_data {
+  font-weight: 300;
+  font-size: 12px;
+  margin-right: 10px;
+}
+#sub2 .item_details .details_review .details_review_box .review_date {
+  margin-top: 20px;
+  font-size: 12px;
 }
