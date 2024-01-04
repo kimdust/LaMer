@@ -1410,8 +1410,6 @@ body swiper-container {
 }
 #sub2 .item_details .details_review {
   margin: 40px 0 100px 0;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #bdbdbd;
 }
 #sub2 .item_details .details_review .dropdown {
   text-align: right;
