@@ -1431,6 +1431,7 @@ body swiper-container {
 }
 #sub2 .item_details .details_review .details_review_box .review_tit {
   font-size: 16px;
+  padding-top: 20px;
 }
 #sub2 .item_details .details_review .details_review_box .review_type {
   display: flex;
@@ -1459,5 +1460,6 @@ body swiper-container {
 }
 #sub2 .item_details .details_review .details_review_box .review_date {
   margin-top: 20px;
+  margin-bottom: 30px;
   font-size: 12px;
 }
