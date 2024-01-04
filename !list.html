@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>LA MER 반응형 코딩리스트</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        overflow-y: scroll;
+      }
+      .header {
+        overflow: hidden;
+      }
+      h1 {
+        margin: 0 8px 0 0;
+        float: left;
+      }
+      .count {
+        display: table;
+        width: 300px;
+        margin: 10px 0 8px 0;
+        line-height: 1;
+      }
+      .count dt {
+        display: table-cell;
+        padding: 0 4px;
+        line-height: inherit;
+        white-space: nowrap;
+        text-align: right;
+        vertical-align: middle;
+      }
+      .count dd {
+        display: table-cell;
+        padding: 0 4px 0 0;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: inherit;
+        vertical-align: middle;
+      }
+      .progress {
+        width: 120px;
+      }
+
+      .download {
+        margin: 0 0 14px;
+      }
+
+      .nav-item {
+        font-size: 12px;
+      }
+
+      .tab-content {
+        padding: 1em 0;
+      }
+      .table {
+        border: 1px solid #ddd;
+        table-layout: fixed;
+      }
+      .table th,
+      .table td {
+        padding: 5px 8px 6px;
+        font-family: sans-serif;
+        font-size: 12px;
+        word-wrap: break-word;
+        word-break: break-all;
+        border: 1px solid #ddd;
+      }
+
+      .table thead th {
+        padding-top: 4px;
+        padding-bottom: 4px;
+        border-width: 0;
+        text-align: center;
+      }
+
+      .table th {
+        color: #fff;
+        background: #17a2b8;
+      }
+
+      .table tbody {
+        counter-reset: count;
+      }
+
+      .table tbody td:not([class^="category"]):first-child {
+        counter-increment: count;
+      }
+
+      .table td:not([class^="category"]):first-child:before {
+        content: counter(count);
+      }
+
+      .table td:nth-child(2),
+      .table td:nth-child(3),
+      .table td:nth-child(4),
+      .table td:nth-child(5) {
+        text-align: left;
+      }
+
+      .table tr .category {
+        padding: 6px 12px;
+        font-size: 13px;
+        font-weight: bold;
+        color: #17a2b8;
+        text-align: left;
+        border-top: 2px solid #17a2b8;
+        background: #f7f7f7;
+      }
+      .table-hover tbody tr:hover {
+        background: #f4f4f4;
+      }
+      .table tr:hover .table-success {
+        background: #b1dfbb;
+      }
+      .table tr:hover .table-info {
+        background: #abdde5;
+      }
+      .table tr:hover .table-warning {
+        background: #ffe8a1;
+      }
+
+      .diary {
+        border: 1px solid #ddd;
+        table-layout: fixed;
+      }
+      .diary th,
+      .diary td {
+        padding: 5px 8px 6px;
+        font-family: sans-serif;
+        font-size: 12px;
+        word-wrap: break-word;
+        word-break: break-all;
+        border: 1px solid #ddd;
+      }
+
+      .diary thead th {
+        padding-top: 4px;
+        padding-bottom: 4px;
+        border-width: 0;
+        text-align: center;
+      }
+
+      .diary th {
+        color: #fff;
+        background: #e9c13b;
+      }
+
+      @media (max-width: 769px) {
+        .h2 {
+          font-size: 1.5em;
+        }
+        .count dd {
+          font-size: 1em;
+        }
+
+        .table {
+          display: block;
+          overflow: hidden;
+        }
+
+        .table thead {
+          display: none;
+        }
+
+        .table tbody,
+        .table tr {
+          display: block;
+          width: 100%;
+          overflow: hidden;
+        }
+
+        .table td {
+          width: 25%;
+          min-height: 28px;
+          word-break: keep-all;
+          border-width: 0;
+          float: left;
+        }
+
+        .table td:first-child {
+          display: none;
+        }
+
+        .table td:nth-child(6) {
+          width: 70%;
+          height: 31px;
+          margin: 0 0 0 10%;
+          text-align: right;
+          border-width: 1px 0;
+          clear: both;
+        }
+        .table td:nth-child(8) {
+          width: 20%;
+          height: 31px;
+          border-width: 1px 0;
+        }
+        .table td:nth-child(7),
+        .table td:nth-child(9) {
+          display: none;
+        }
+
+        .table td.category {
+          display: block;
+          width: 100%;
+          border-width: 1px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="header">
+        <h1 class="h2">LA MER 반응형 코딩리스트</h1>
+        <dl class="count">
+          <dt>
+            <span class="badge badge-dark">총 페이지수</span>
+          </dt>
+          <dd id="totalPage">0</dd>
+          <dt>
+            <span class="badge badge-danger">완료</span>
+          </dt>
+          <dd id="completed" class="text-danger">0</dd>
+          <dt>
+            <span class="badge badge-danger">진행률</span>
+          </dt>
+          <dd>
+            <div class="progress">
+              <div
+                class="progress-bar bg-danger"
+                role="progressbar"
+                style="width: 0"
+                aria-valuenow="0"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                0%
+              </div>
+            </div>
+          </dd>
+        </dl>
+      </div>
+
+      <!-- <a href="#" class="btn btn-outline-dark btn-sm download">Git 바로가기</a>
+        <a href="#" class="btn btn-outline-dark btn-sm download">파일 다운로드(Git)</a> -->
+
+      <div class="content">
+        <div class="tab-content" id="myTabContent">
+          <table class="table table-hover">
+            <colgroup>
+              <col style="width: 3%" />
+              <col style="width: 10%" />
+              <col style="width: 12%" />
+              <col style="width: 32%" />
+              <col style="width: 8%" />
+              <col style="width: 5%" />
+              <col style="width: 30%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>페이지명</th>
+                <th>파일명</th>
+                <th>상세</th>
+                <th>최종 업데이트</th>
+                <th>현황</th>
+                <th>비고</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td>Header</td>
+                <td>index.html, comm.scss</td>
+                <td>로고, 네비게이션 슬라이드, 마이페이지 버튼</td>
+                <td>2023-12-28</td>
+                <td>완료</td>
+                <td>
+                  반응형, 그누보드 구현 완료 / 여유 있으면 검색 기능 수정 필요
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Footer</td>
+                <td>index.html, comm.scss</td>
+                <td>공지사항, 뉴스, 로고, 네비게이션, 카피라이트</td>
+                <td>2023-12-28</td>
+                <td>완료</td>
+                <td>반응형, 그누보드 구현 완료</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>HOME</td>
+                <td>index.html, main.scss</td>
+                <td>
+                  인트로, 베스트아이템 슬라이드, 온라인 혜택, 블루하트 캠페인,
+                  SNS
+                </td>
+                <td>2023-12-28</td>
+                <td>완료</td>
+                <td>반응형, 그누보드 구현 완료</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>BEST ITEM</td>
+                <td>sub1.html, sub1.scss</td>
+                <td>제품 카테고리, 드롭박스, 아이템 정렬</td>
+                <td>2023-12-30</td>
+                <td>완료</td>
+                <td>
+                  반응형 구현 완료
+                  <br />
+                  카테고리/드롭박스 선택 별로 정렬되는 건 구현... 하고 싶다
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>크렘 드 라 메르</td>
+                <td>sub2.html, sub2.scss</td>
+                <td>제품 상세페이지, 설명, 교환/반품 규정, 리뷰, 문의 탭</td>
+                <td>2024-01-04</td>
+                <td>진행중</td>
+                <td>
+                  설명~리뷰까지 완료, 게시판 형식을 그누보드에서 어떻게 수정해야
+                  할지 고민
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>로그인</td>
+                <td></td>
+                <td>로그인, SNS 연동 로그인, 회원가입 이동 버튼</td>
+                <td></td>
+                <td>진행중</td>
+                <td>그누보드 탬플릿 사용</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>회원가입</td>
+                <td></td>
+                <td>회원가입</td>
+                <td></td>
+                <td>진행중</td>
+                <td>그누보드 탬플릿 사용</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <table class="diary">
+          <colgroup>
+            <col style="width: 7%" />
+            <col style="width: 20%" />
+            <col style="width: 78%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th>작성일</th>
+              <th>오늘의 개발 고민</th>
+              <th>오늘의 개발 일기</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2024-01-03</td>
+              <td>그누보드 진짜 어떡하지</td>
+              <td>
+                그누보드... 정말 어렵다 지금까지 강의 들으면서 한 번도 어렵다고
+                느껴본 적이 없는데 이런 경험은 처음이야!!!!!! 도대체 어디서부터
+                어떻게 수정을 해야 할지 pnp인지 npm인지 뭐시깽이인지 암것도
+                모르겠고 그냥 템플릿 없이 html에 맨몸박치기 하고 싶다
+              </td>
+            </tr>
+            <tr>
+              <td>2024-01-04</td>
+              <td>
+                상세페이지 문의 탭은 이번주 안으로 완성될 듯?
+                <br />
+                그누보드 검색 진짜 어떡하지
+              </td>
+              <td>
+                정말 천만다행으로 그누보드 안 살리고 내 코드를 복붙하기로 했다
+                그누보드 살려서 하는 거였으면 정말 탈주했을 거야... 물론 복붙도
+                쉽지 않다 정말
+                <br />
+                메인을 붙여넣었는데 스와이퍼가 헤까닥 돌아버렸다 뭐 어찌저찌
+                고치긴 했는데 내가 고쳐놓고 내가 어떻게 했는지 모르겠음 근데
+                그누보드 하다보니 이런 일이 X382952번 정도 생겼다 ㅜ0ㅜ
+                관리자모드 들어가려니 자꾸 '올바른 방법으로 이용해주십시오' 라는
+                에러가 떴었는데 또 어떻게 하다보니 고쳐졌다... 15시까지 그누보드
+                검색창 고치다가 진짜 머리통 책상에 박을 거 같아서 급하게 제품
+                상세페이지 만드는 걸로 경로변경함
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="footer"></div>
+    </div>
+
+    <script>
+      $(function () {
+        var total = 0,
+          completed = 0,
+          progress = 0;
+
+        $(".table td")
+          .filter(":first-child")
+          .not(".category")
+          .each(function (idx) {
+            total += 1;
+          });
+
+        $("table td")
+          .not(".category")
+          .each(function () {
+            var $this = $(this);
+
+            if ($this.text().indexOf(".html") > -1) {
+              $this.html(
+                '<a href="' +
+                  $this.text() +
+                  '" target="_blank">' +
+                  $this.text().replace(/^.*\//g, "").replace(".html", "") +
+                  "</a>"
+              );
+            }
+
+            if ($this.text().match(/^완료$/)) {
+              $this.addClass("table-success");
+              completed += 1;
+            } else if ($this.text().match(/^진행중$/)) {
+              $this.addClass("table-warning");
+            }
+          });
+
+        progress = Math.ceil((completed / total) * 100);
+
+        $("#totalPage").text(total);
+        $("#completed").text(completed);
+        $(".progress-bar")
+          .css("width", progress + "%")
+          .attr("area-valuenow", progress)
+          .text(progress + "%");
+      });
+    </script>
+  </body>
+</html>
