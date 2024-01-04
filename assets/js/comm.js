@@ -60,4 +60,19 @@ $(function () {
       }
     });
   });
+
+  // 리뷰 더보기
+  $(".review_all").addClass("clamped");
+
+  $(".read-more-btn").click(function () {
+    var $reviewAll = $(".review_all");
+
+    if ($reviewAll.hasClass("clamped")) {
+      $reviewAll.removeClass("clamped");
+      $(this).text("접기");
+    } else {
+      $reviewAll.addClass("clamped");
+      $(this).text("더보기");
+    }
+  });
 });

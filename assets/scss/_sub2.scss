@@ -239,6 +239,8 @@
     }
     .details_review {
       margin: 40px 0 100px 0;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $gray-400;
       .dropdown {
         text-align: right;
         margin: 10px 0 20px 0;
@@ -270,6 +272,19 @@
             font-size: 12px;
             margin-right: 10px;
           }
+        }
+        .review_all {
+          &.clamped {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+          }
+        }
+        .read-more-btn {
+          font-size: 15px;
+          color: $gray-600;
         }
         .review_date {
           margin-top: 20px;
