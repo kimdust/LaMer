@@ -1,0 +1,56 @@
+#mypage {
+  margin: 60px 20px 100px 20px;
+  h2 {
+    font-family: "Newyork";
+    font-size: 20px;
+    padding: 30px 0;
+  }
+
+  .mypage_col {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    li {
+      width: 33.3333%;
+      font-size: 13px;
+      height: 35px;
+      &.active {
+        border-bottom: 3px solid $primary;
+        font-weight: 600;
+      }
+    }
+  }
+  .mypage_main {
+    .mypage_name {
+      display: flex;
+      justify-content: space-between;
+    }
+    .cou_pt {
+      text-align: left;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $gray-200;
+    }
+    .mypage_list {
+      margin-top: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0 20px;
+      li {
+        width: calc(50% - 20px);
+        text-align: left;
+        margin-bottom: 10px;
+        padding: 0 10px;
+        box-sizing: border-box;
+      }
+    }
+    .mypage_ex {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      li {
+        margin-right: 20px;
+      }
+    }
+  }
+}

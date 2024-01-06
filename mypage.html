@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME | La Mer</title>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="La Mer" />
+    <meta
+      property="og:description"
+      content="라 메르, 당신이 꿈꿔온 마법 같은 순간"
+    />
+    <meta property="og:image" content="/images/comm/Logo.png" />
+    <meta property="og:url" content="https://kimdust.github.io" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="La Mer" />
+    <meta
+      name="twitter:description"
+      content="라 메르, 당신이 꿈꿔온 마법 같은 순간"
+    />
+    <meta name="twitter:image" content="/images/comm/Logo.png" />
+    <meta name="twitter:domain" content="La Mer" />
+
+    <link
+      rel="icon"
+      href="/images/comm/favicon.ico"
+      type="image/x-icon"
+      sizes="16x16"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/comm.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script defer src="assets/js/comm.js"></script>
+  </head>
+  <body>
+    <div id="u-skip">
+      <a href="#gnb">주메뉴 바로가기</a>
+      <a href="#main">본문 바로가기</a>
+    </div>
+
+    <div class="wrap">
+      <header id="header">
+        <div class="header_close">
+          <div class="logo">
+            <h1>
+              <a href="index.html"
+                ><img src="./images/comm/Logo.png" alt="LA MER"
+              /></a>
+            </h1>
+          </div>
+          <div class="menu_left">
+            <input type="checkbox" id="menuToggle" class="menu_toggle" />
+            <label for="menuToggle" class="side_menu">
+              <i class="las la-bars"></i>
+              <i class="las la-times"></i>
+              <span class="blind">메뉴</span>
+            </label>
+
+            <div class="menu_nav" id="gnb">
+              <ul class="menu_1dept">
+                <li>
+                  <input
+                    type="checkbox"
+                    id="shoppingToggle"
+                    class="gnb_toggle"
+                  />
+                  <label for="shoppingToggle" class="gnb_1dept">쇼핑</label>
+
+                  <ul class="menu_2dept">
+                    <li><a href="sub1.html">Best Item</a></li>
+                    <li><a href="#">Skin Care</a></li>
+                    <li><a href="#">Skin Color</a></li>
+                    <li><a href="#">Body</a></li>
+                    <li><a href="#">Collection</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <input type="checkbox" id="storyToggle" class="gnb_toggle" />
+                  <label for="storyToggle" class="gnb_1dept"
+                    >라 메르 이야기</label
+                  >
+
+                  <ul class="menu_2dept">
+                    <li><a href="#">라 메르 스토리</a></li>
+                    <li><a href="#">원료에 대한 철학</a></li>
+                    <li><a href="#">미라클 브로스&#8482;</a></li>
+                    <li><a href="#">블루 하트 캠페인</a></li>
+                  </ul>
+                </li>
+                <li class="serch">
+                  <a href="#">검색</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="menu_right">
+            <a href="#">
+              <i class="las la-user">
+                <span class="blind">마이페이지</span>
+              </i>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <div id="mypage">
+        <section id="mypage_wrap">
+          <h2>MY PAGE</h2>
+
+          <div class="mypage_tab active">
+            <ul class="mypage_col">
+              <li>마이 페이지</li>
+              <li>주문 정보</li>
+              <li>회원 정보</li>
+            </ul>
+          </div>
+          <div class="mypage_main">
+            <div class="mypage_name">
+              <strong class="my_ov_name">
+                <?php echo $member['mb_name']; ?>
+                김민지 님
+              </strong>
+
+              <div class="logout">LOG OUT</div>
+            </div>
+
+            <dl class="cou_pt">
+              <dt>보유쿠폰</dt>
+              <dd>
+                <a
+                  href="<?php echo G5_SHOP_URL; ?>/coupon.php"
+                  target="_blank"
+                  class="win_coupon"
+                >
+                  <?php echo number_format($cp_count); ?>
+                </a>
+              </dd>
+            </dl>
+
+            <ul class="mypage_list">
+              <li>
+                <i class="las la-history"></i>
+                <span>입금대기</span>
+                <span class="list_history">0</span>
+              </li>
+              <li>
+                <i class="las la-money-bill-wave"></i>
+                <span>결제완료</span>
+                <span class="list_history">0</span>
+              </li>
+              <li>
+                <i class="las la-box"></i>
+                <span>상품준비중</span>
+                <span class="list_history">0</span>
+              </li>
+              <li>
+                <i class="las la-truck"></i>
+                <span>배송중</span>
+                <span class="list_history">0</span>
+              </li>
+              <li>
+                <i class="las la-box-open"></i>
+                <span>배송완료</span>
+                <span class="list_history">0</span>
+              </li>
+              <li>
+                <i class="las la-thumbs-up"></i>
+                <span>구매확정</span>
+                <span class="list_history">0</span>
+              </li>
+            </ul>
+            <ul class="mypage_ex">
+              <li>
+                <span>취소</span>
+                <span class="ex_history">0</span>
+              </li>
+              <li>
+                <span>교환</span>
+                <span class="ex_history">0</span>
+              </li>
+              <li>
+                <span>반품</span>
+                <span class="ex_history">0</span>
+              </li>
+            </ul>
+          </div>
+          <div class="mypage_order">최근 주문 내역이 없습니다.</div>
+          <div class="mypage_info">
+            <ul>
+              <?php } ?>
+              <li>
+                <a href="#" class="btn01">회원정보수정</a>
+              </li>
+              <dl class="op_area">
+                <dt>연락처</dt>
+                <dd>
+                  <?php echo ($member['mb_tel'] ? $member['mb_tel'] : '미등록'); ?>
+                </dd>
+                <dt>E-Mail</dt>
+                <dd>
+                  <?php echo ($member['mb_email'] ? $member['mb_email'] : '미등록'); ?>
+                </dd>
+              </dl>
+              <li>
+                <a
+                  href="<?php echo G5_BBS_URL; ?>/member_confirm.php?url=member_leave.php"
+                  onclick="return member_leave();"
+                  class="btn01"
+                  >회원탈퇴</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- <?php if ($is_admin == 'super') { ?>
+          <li>
+            <a href="<?php echo G5_ADMIN_URL; ?>/" class="btn_admin">관리자</a> -->
+        </section>
+      </div>
+    </div>
+
+    <footer id="footer">
+      <div class="ft_list">
+        <dl>
+          <dt class="notice">
+            <!-- 아이콘 before -->
+            <a href="#">NOTICE</a>
+          </dt>
+          <dd><a href="#">한글날 배송 안내</a></dd>
+        </dl>
+        <dl>
+          <dt class="news">
+            <!-- 아이콘 before -->
+            <a href="#">NEWS</a>
+          </dt>
+          <dd>
+            <a href="#"
+              >&#91;NEWS&#93; &#34;시대를 초월한 매력&#34; 전지현, 라메르 최초
+              브랜드 엠버서더</a
+            >
+          </dd>
+        </dl>
+      </div>
+
+      <div class="ft_logo">
+        <img src="/images/comm/Logo.png" alt="LA MER" />
+      </div>
+
+      <div class="ft_nav">
+        <ul class="ft_1dept">
+          <li>
+            <input type="checkbox" id="newsletterToggle" class="dept_toggle" />
+            <label for="newsletterToggle" class="txt1280_3">뉴스레터</label>
+            <ul class="ft_2dept letter_2dept">
+              <li class="newsletter_btn">
+                뉴스레터에 가입해서 라 메르의 최신 정보를 확인하세요.
+                <input
+                  type="email"
+                  id="email"
+                  pattern=".+@.com"
+                  placeholder="example@gmail.com"
+                  required
+                  class="email"
+                />
+                <input type="submit" value="가입하기" class="join" />
+              </li>
+            </ul>
+          </li>
+          <div class="ft_nav_col">
+            <li>
+              <input type="checkbox" id="lamerToggle" class="dept_toggle" />
+              <label for="lamerToggle">라 메르</label>
+              <ul class="ft_2dept col_2dept">
+                <li><a href="#">라 메르 스토리</a></li>
+                <li><a href="#">원료에 대한 철학</a></li>
+                <li><a href="#">미라클 브로스&#8482;</a></li>
+                <li><a href="#">블루 하트 캠페인</a></li>
+              </ul>
+            </li>
+            <li>
+              <input type="checkbox" id="callToggle" class="dept_toggle" />
+              <label for="callToggle">고객관리지원팀</label>
+              <ul class="ft_2dept col_2dept">
+                <li><a href="tel:02-6971-3215">02-6971-3215</a></li>
+                <li><a href="#">고객 문의</a></li>
+                <li><a href="#">배송 및 교환</a></li>
+                <li><a href="#">매장 찾기</a></li>
+                <li><a href="#">라 메르 회사 정보</a></li>
+                <li><a href="#">채용 정보</a></li>
+                <li><a href="#">고객 지원 서비스</a></li>
+              </ul>
+            </li>
+            <li>
+              <input type="checkbox" id="followToggle" class="dept_toggle" />
+              <label for="followToggle">팔로우</label>
+              <ul class="ft_2dept col_2dept">
+                <li><a href="#">인스타그램</a></li>
+                <li><a href="#">페이스북</a></li>
+                <li><a href="#">핀터레스트</a></li>
+                <li><a href="#">유튜브</a></li>
+              </ul>
+            </li>
+          </div>
+        </ul>
+      </div>
+
+      <div class="ft_info">
+        <h5>&#169; 라 메르 테크놀로지, Inc</h5>
+        <ul>
+          <li>
+            <a href="#">개인정보처리방침</a>
+            <a href="#">정품 및 품질 보증</a>
+            <a href="#">서비스 이용약관</a>
+            <a href="#">고객지원 서비스</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

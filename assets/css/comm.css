@@ -1461,3 +1461,57 @@ body swiper-container {
   margin-bottom: 30px;
   font-size: 12px;
 }
+
+#mypage {
+  margin: 60px 20px 100px 20px;
+}
+#mypage h2 {
+  font-family: "Newyork";
+  font-size: 20px;
+  padding: 30px 0;
+}
+#mypage .mypage_col {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#mypage .mypage_col li {
+  width: 33.3333%;
+  font-size: 13px;
+  height: 35px;
+}
+#mypage .mypage_col li.active {
+  border-bottom: 3px solid #326b36;
+  font-weight: 600;
+}
+#mypage .mypage_main .mypage_name {
+  display: flex;
+  justify-content: space-between;
+}
+#mypage .mypage_main .cou_pt {
+  text-align: left;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+#mypage .mypage_main .mypage_list {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+#mypage .mypage_main .mypage_list li {
+  width: calc(50% - 20px);
+  text-align: left;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+#mypage .mypage_main .mypage_ex {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+#mypage .mypage_main .mypage_ex li {
+  margin-right: 20px;
+}

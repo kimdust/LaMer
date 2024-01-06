@@ -75,4 +75,32 @@ $(function () {
       $(this).text("더보기");
     }
   });
+
+  // 마이페이지 탭
+  $(document).ready(function () {
+    $(".mypage_tab li:first-child").addClass("active");
+    $(".mypage_order, .mypage_info").hide();
+    $(".mypage_main").show();
+
+    $(".mypage_tab .mypage_col li").on("click", function () {
+      $(".mypage_tab .mypage_col li").removeClass("active");
+      $(this).addClass("active");
+
+      var index = $(this).index();
+
+      $(".mypage_main, .mypage_order, .mypage_info").hide();
+
+      switch (index) {
+        case 0:
+          $(".mypage_main").show();
+          break;
+        case 1:
+          $(".mypage_order").show();
+          break;
+        case 2:
+          $(".mypage_info").show();
+          break;
+      }
+    });
+  });
 });
