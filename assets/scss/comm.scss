@@ -378,20 +378,15 @@ body {
           }
         }
         .ft_nav_col {
-          display: flex;
           flex-grow: 1;
-          justify-content: flex-end;
-          align-items: flex-start;
           text-align: right;
           li {
             margin-left: 50px;
             font-size: 15px;
-            .col_2dept {
-              li {
-                margin-right: -20px;
-                text-align: right;
-              }
-            }
+            text-align: right;
+          }
+          .col_2dept {
+            margin-right: -20px;
           }
         }
         .ft_2dept {

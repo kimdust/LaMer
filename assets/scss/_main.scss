@@ -322,7 +322,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    video {
+      width: 100%;
+      height: auto;
+    }
     .txt1280_2 {
       display: none;
     }

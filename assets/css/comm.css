@@ -601,19 +601,16 @@ body swiper-container {
     margin-top: 10px;
   }
   #footer .ft_nav .ft_1dept .ft_nav_col {
-    display: flex;
     flex-grow: 1;
-    justify-content: flex-end;
-    align-items: flex-start;
     text-align: right;
   }
   #footer .ft_nav .ft_1dept .ft_nav_col li {
     margin-left: 50px;
     font-size: 15px;
-  }
-  #footer .ft_nav .ft_1dept .ft_nav_col li .col_2dept li {
-    margin-right: -20px;
     text-align: right;
+  }
+  #footer .ft_nav .ft_1dept .ft_nav_col .col_2dept {
+    margin-right: -20px;
   }
   #footer .ft_nav .ft_1dept .ft_2dept {
     opacity: 1;
@@ -944,6 +941,10 @@ body swiper-container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#main .blueheart video {
+  width: 100%;
+  height: auto;
 }
 #main .blueheart .txt1280_2 {
   display: none;

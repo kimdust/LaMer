@@ -131,19 +131,19 @@
           >
             <swiper-slide>
               <img
-                src="images/item/크렘 드 라 메르 상세1.png"
+                src="images/item/크렘-드-라-메르-상세1.png"
                 alt="크렘 드 라 메르"
               />
             </swiper-slide>
             <swiper-slide>
               <img
-                src="images/item/크렘 드 라 메르 상세2.png"
+                src="images/item/크렘-드-라-메르-상세2.png"
                 alt="크렘 드 라 메르"
               />
             </swiper-slide>
             <swiper-slide>
               <img
-                src="images/item/크렘 드 라 메르 상세3.png"
+                src="images/item/크렘-드-라-메르-상세3.png"
                 alt="크렘 드 라 메르"
             /></swiper-slide>
           </swiper-container>
@@ -217,7 +217,7 @@
                 <label for="500ML">500ML &#47; &#8361;3,820,000</label>
               </div>
             </div>
-            <div class="item_txt_1dept">
+            <ul class="item_txt_1dept">
               <li>
                 <input type="checkbox" id="exToggle" class="item_toggle" />
                 <label for="exToggle">제품 설명</label>
@@ -301,7 +301,7 @@
                   마십시오.
                 </p>
               </li>
-            </div>
+            </ul>
             <div class="item_order">
               <p>무료 배송 혜택 &#38; 전 상품 구매 시 샘플 증정</p>
               <div class="order_col">
@@ -327,19 +327,19 @@
           <div class="rec_col">
             <div class="rec_box">
               <a href="#">
-                <img src="images/item/마이크로 필.png" alt="마이크로 필" />
+                <img src="images/item/마이크로-필.png" alt="마이크로 필" />
                 마이크로 필
               </a>
             </div>
             <div class="rec_box">
               <a href="#">
-                <img src="images/item/클렌징 폼.png" alt="클렌징 폼" />
+                <img src="images/item/클렌징-폼.png" alt="클렌징 폼" />
                 클렌징 폼
               </a>
             </div>
             <div class="rec_box">
               <a href="#">
-                <img src="images/item/립 볼류마이저.png" alt="립 볼류마이저" />
+                <img src="images/item/립-볼류마이저.png" alt="립 볼류마이저" />
                 립 볼류마이저
               </a>
             </div>
@@ -462,21 +462,19 @@
             <strong>리뷰(21)</strong>
             <div class="dropdown">
               <select class="dropdown_btn">
-                <option id="option" value selected="selected">
+                <option value="5stars" selected="selected">
                   &starf; &starf; &starf; &starf; &starf;
                 </option>
-                <option id="option" value="hit">
+                <option value="4stars">
                   &starf; &starf; &starf; &starf; &star;
                 </option>
-                <option id="option" value="sell">
+                <option value="3stars">
                   &starf; &starf; &starf;&star;&star;
                 </option>
-                <option id="option" value="date">
+                <option value="2stars">
                   &starf; &starf;&star;&star;&star;
                 </option>
-                <option id="option" value="review">
-                  &starf;&star;&star;&star;&star;
-                </option>
+                <option value="1stars">&starf;&star;&star;&star;&star;</option>
               </select>
             </div>
             <div class="details_review_box">
@@ -594,6 +592,7 @@
           <div class="details_qna">문의</div>
         </div>
       </div>
+
       <footer id="footer">
         <div class="ft_list">
           <dl>
@@ -645,41 +644,39 @@
                 </li>
               </ul>
             </li>
-            <div class="ft_nav_col">
-              <li>
-                <input type="checkbox" id="lamerToggle" class="dept_toggle" />
-                <label for="lamerToggle">라 메르</label>
-                <ul class="ft_2dept col_2dept">
-                  <li><a href="#">라 메르 스토리</a></li>
-                  <li><a href="#">원료에 대한 철학</a></li>
-                  <li><a href="#">미라클 브로스&#8482;</a></li>
-                  <li><a href="#">블루 하트 캠페인</a></li>
-                </ul>
-              </li>
-              <li>
-                <input type="checkbox" id="callToggle" class="dept_toggle" />
-                <label for="callToggle">고객관리지원팀</label>
-                <ul class="ft_2dept col_2dept">
-                  <li><a href="tel:02-6971-3215">02-6971-3215</a></li>
-                  <li><a href="#">고객 문의</a></li>
-                  <li><a href="#">배송 및 교환</a></li>
-                  <li><a href="#">매장 찾기</a></li>
-                  <li><a href="#">라 메르 회사 정보</a></li>
-                  <li><a href="#">채용 정보</a></li>
-                  <li><a href="#">고객 지원 서비스</a></li>
-                </ul>
-              </li>
-              <li>
-                <input type="checkbox" id="followToggle" class="dept_toggle" />
-                <label for="followToggle">팔로우</label>
-                <ul class="ft_2dept col_2dept">
-                  <li><a href="#">인스타그램</a></li>
-                  <li><a href="#">페이스북</a></li>
-                  <li><a href="#">핀터레스트</a></li>
-                  <li><a href="#">유튜브</a></li>
-                </ul>
-              </li>
-            </div>
+            <li class="ft_nav_col">
+              <input type="checkbox" id="lamerToggle" class="dept_toggle" />
+              <label for="lamerToggle">라 메르</label>
+              <ul class="ft_2dept col_2dept">
+                <li><a href="#">라 메르 스토리</a></li>
+                <li><a href="#">원료에 대한 철학</a></li>
+                <li><a href="#">미라클 브로스&#8482;</a></li>
+                <li><a href="#">블루 하트 캠페인</a></li>
+              </ul>
+            </li>
+            <li class="ft_nav_col">
+              <input type="checkbox" id="callToggle" class="dept_toggle" />
+              <label for="callToggle">고객관리지원팀</label>
+              <ul class="ft_2dept col_2dept">
+                <li><a href="tel:02-6971-3215">02-6971-3215</a></li>
+                <li><a href="#">고객 문의</a></li>
+                <li><a href="#">배송 및 교환</a></li>
+                <li><a href="#">매장 찾기</a></li>
+                <li><a href="#">라 메르 회사 정보</a></li>
+                <li><a href="#">채용 정보</a></li>
+                <li><a href="#">고객 지원 서비스</a></li>
+              </ul>
+            </li>
+            <li class="ft_nav_col">
+              <input type="checkbox" id="followToggle" class="dept_toggle" />
+              <label for="followToggle">팔로우</label>
+              <ul class="ft_2dept col_2dept">
+                <li><a href="#">인스타그램</a></li>
+                <li><a href="#">페이스북</a></li>
+                <li><a href="#">핀터레스트</a></li>
+                <li><a href="#">유튜브</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
 
