@@ -1,5 +1,6 @@
 #mypage {
-  margin: 60px 20px 100px 20px;
+  margin: 60px 20px;
+  height: calc(100vh - $hd-height - $ft-height);
   h2 {
     font-family: "Newyork";
     font-size: 20px;
@@ -26,9 +27,24 @@
       justify-content: space-between;
     }
     .cou_pt {
+      display: flex;
       text-align: left;
       padding-bottom: 20px;
       border-bottom: 1px solid $gray-200;
+    }
+    .cou_pt dt {
+      margin-right: 5px;
+    }
+    .logout {
+      background-color: #326b36;
+      border-radius: 10px;
+      font-family: "Pretendard";
+      padding: 3px 7px;
+      a {
+        color: #fff;
+        font-size: 15px;
+        font-weight: 300;
+      }
     }
     .mypage_list {
       margin-top: 25px;
@@ -51,6 +67,18 @@
       li {
         margin-right: 20px;
       }
+    }
+  }
+  .mypage_info {
+    dt {
+      font-weight: 600;
+      padding: 10px 0;
+    }
+    li a {
+      padding-top: 40px;
+      border: none;
+      background-color: #fff;
+      font-weight: 500;
     }
   }
 }
