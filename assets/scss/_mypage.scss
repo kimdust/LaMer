@@ -82,3 +82,26 @@
     }
   }
 }
+
+@media (min-width: 1280px) {
+  #mypage {
+    margin: 100px auto 0;
+    width: 900px;
+    height: calc(100vh - 350px);
+    h2 {
+      font-size: 35px;
+    }
+    .mypage_col li {
+      font-size: 18px;
+    }
+    .mypage_name .my_ov_name {
+      font-size: 20px;
+    }
+    .mypage_main .mypage_list {
+      li {
+        width: 15%;
+        font-size: 16px;
+      }
+    }
+  }
+}

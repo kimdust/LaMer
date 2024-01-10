@@ -369,7 +369,7 @@ body {
           flex-direction: column;
           align-items: flex-start;
           font-size: 15px;
-          padding-right: 300px;
+          padding-right: 380px;
           .email {
             margin-top: 20px;
           }
@@ -432,4 +432,4 @@ body {
   }
 }
 
-@import "main", "bestitem", "about_item001", "mypage", "notice";
+@import "main", "bestitem", "about_item001", "mypage";

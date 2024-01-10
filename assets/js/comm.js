@@ -103,4 +103,61 @@ $(function () {
       }
     });
   });
+
+  // GSAP 스크롤트리거
+  gsap.registerPlugin(ScrollTrigger);
+
+  const sections = document.querySelectorAll(
+    ".bestitem, .benefits, .blueheart, .instagram"
+  );
+
+  sections.forEach((section) => {
+    gsap.from(section, {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      scrollTrigger: {
+        trigger: section,
+        start: "top 50%",
+        end: "bottom 50%",
+        toggleActions: "play none none reverse",
+      },
+    });
+  });
+
+  // 제품 카테고리별
+  document.addEventListener("DOMContentLoaded", function () {
+    const categoryLinks = document.querySelectorAll(
+      "#categoryContainer .mySwiper a"
+    );
+    const items = document.querySelectorAll(".item ul li");
+
+    // 카테고리 클릭 이벤트 추가
+    categoryLinks.forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        // 선택된 카테고리 이름 가져오기
+        const categoryName = e.target.innerText.trim();
+
+        // 모든 아이템 숨기기
+        items.forEach(function (item) {
+          item.style.display = "none";
+        });
+
+        // 선택된 카테고리에 해당하는 아이템만 표시
+        items.forEach(function (item) {
+          const itemCategories = item.getAttribute("data-category").split(" ");
+
+          // 선택된 카테고리가 아이템의 카테고리 중 하나에 포함되는 경우 표시
+          if (
+            itemCategories.includes(categoryName) ||
+            categoryName === "전체"
+          ) {
+            item.style.display = "block";
+          }
+        });
+      });
+    });
+  });
 });

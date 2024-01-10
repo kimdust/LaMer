@@ -602,7 +602,7 @@ body swiper-container {
     flex-direction: column;
     align-items: flex-start;
     font-size: 15px;
-    padding-right: 300px;
+    padding-right: 380px;
   }
   #footer .ft_nav .ft_1dept .newsletter_btn .email {
     margin-top: 20px;
@@ -1031,15 +1031,15 @@ body swiper-container {
 }
 #main .instagram .instagram_img li {
   flex: 0 0 33.333333%;
-  padding: 5px;
+  padding: 10px 5px;
   box-sizing: border-box;
 }
 #main .instagram .instagram_img li a {
   transition: transform 0.3s;
 }
 #main .instagram .instagram_img li a img {
-  width: 100%;
-  display: block;
+  width: calc(100% - 10px);
+  height: auto;
 }
 #main .instagram .instagram_img li a:hover img {
   transform: scale(1.1);
@@ -1058,7 +1058,7 @@ body swiper-container {
   }
   #main .instagram .instagram_img {
     margin-top: 60px;
-    padding: 0 220px;
+    padding: 0 250px;
   }
 }
 
@@ -1833,7 +1833,23 @@ body swiper-container {
   font-weight: 500;
 }
 
-#notice {
-  margin: 60px 20px;
-  height: calc(100vh - 60px - 517px);
+@media (min-width: 1280px) {
+  #mypage {
+    margin: 100px auto 0;
+    width: 900px;
+    height: calc(100vh - 350px);
+  }
+  #mypage h2 {
+    font-size: 35px;
+  }
+  #mypage .mypage_col li {
+    font-size: 18px;
+  }
+  #mypage .mypage_name .my_ov_name {
+    font-size: 20px;
+  }
+  #mypage .mypage_main .mypage_list li {
+    width: 15%;
+    font-size: 16px;
+  }
 }
