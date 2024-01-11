@@ -107,39 +107,40 @@ $(function () {
   // GSAP 스크롤트리거
   gsap.registerPlugin(ScrollTrigger);
 
-  const sections = document.querySelectorAll(
-    ".bestitem, .benefits, .blueheart, .instagram"
-  );
-
-  sections.forEach((section) => {
-    gsap.from(section, {
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      scrollTrigger: {
-        trigger: section,
-        start: "top 60%",
-        end: "bottom 80%",
-        toggleActions: "play none none reverse",
-      },
-    });
-  });
-
   if ($(window).width() > 1280) {
-    sections.forEach((section) => {
-      gsap.from(section, {
+    function fadeInOnScroll(element) {
+      gsap.from(element, {
         opacity: 0,
-        y: 50,
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: {
-          trigger: section,
-          start: "top 50%",
-          end: "bottom 50%",
-          toggleActions: "play none none reverse",
+          trigger: element,
+          start: "top 80%",
+          end: "bottom 80%",
+          markers: true,
+          scrub: true,
         },
       });
-    });
+    }
+  } else {
+    function fadeInOnScroll(element) {
+      gsap.from(element, {
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 70%",
+          end: "bottom 70%",
+          markers: true,
+          scrub: true,
+        },
+      });
+    }
   }
+
+  fadeInOnScroll(".bestitem");
+  fadeInOnScroll(".benefits");
+  fadeInOnScroll(".blueheart");
+  fadeInOnScroll(".instagram");
 
   // 제품 카테고리별
   document.addEventListener("DOMContentLoaded", function () {
