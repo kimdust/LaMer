@@ -1845,11 +1845,20 @@ body swiper-container {
   #mypage .mypage_col li {
     font-size: 18px;
   }
+  #mypage .mypage_main {
+    padding-top: 20px;
+  }
   #mypage .mypage_name .my_ov_name {
     font-size: 20px;
   }
   #mypage .mypage_main .mypage_list li {
     width: 15%;
     font-size: 16px;
+  }
+  #mypage .mypage_main .cou_pt {
+    padding-bottom: 40px;
+  }
+  #mypage .mypage_main .mypage_list {
+    padding-top: 20px;
   }
 }
