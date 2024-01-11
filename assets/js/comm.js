@@ -118,12 +118,28 @@ $(function () {
       duration: 1,
       scrollTrigger: {
         trigger: section,
-        start: "top 50%",
-        end: "bottom 50%",
+        start: "top 60%",
+        end: "bottom 80%",
         toggleActions: "play none none reverse",
       },
     });
   });
+
+  if ($(window).width() > 1280) {
+    sections.forEach((section) => {
+      gsap.from(section, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        scrollTrigger: {
+          trigger: section,
+          start: "top 50%",
+          end: "bottom 50%",
+          toggleActions: "play none none reverse",
+        },
+      });
+    });
+  }
 
   // 제품 카테고리별
   document.addEventListener("DOMContentLoaded", function () {
