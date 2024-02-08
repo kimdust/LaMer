@@ -3,8 +3,7 @@
 
 ### 2023.12 ~ 2024.01     
 :point_right: [깃허브 페이지] (https://kimdust.github.io/LaMer/index.html)  
-:point_right: [그누보드 페이지] (http://kimdust.dothome.co.kr/) ...월 트래픽 초과    
-:point_right: [그누보드 페이지-백업용] (http://kimdustt.dothome.co.kr/)
+:point_right: [웹 호스팅 페이지] (http://kimdustt.dothome.co.kr/)
 
 <br/>
 
